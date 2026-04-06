@@ -1,0 +1,47 @@
+### CUSTOM ###
+yu-ai-agent/src/main/resources/application-local.yaml
+yu-ai-agent/tmp
+yu-ai-agent/src/main/resources/mcp-servers.json
+yu-ai-agent/src/main/resources/application-prod.yml
+
+yu-ai-agent/HELP.md
+yu-ai-agent/target/
+yu-ai-agent/.mvn/wrapper/maven-wrapper.jar
+!yu-ai-agent/**/src/main/**/target/
+!yu-ai-agent/**/src/test/**/target/
+
+### STS ###
+yu-ai-agent/.apt_generated
+yu-ai-agent/.classpath
+yu-ai-agent/.factorypath
+yu-ai-agent/.project
+yu-ai-agent/.settings
+yu-ai-agent/.springBeans
+yu-ai-agent/.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+yu-ai-agent/nbproject/private/
+yu-ai-agent/nbbuild/
+yu-ai-agent/dist/
+yu-ai-agent/nbdist/
+yu-ai-agent/.nb-gradle/
+yu-ai-agent/build/
+!yu-ai-agent/**/src/main/**/build/
+!yu-ai-agent/**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### 前端 ###
+yu-ai-agent-frontend/node_modules
+yu-ai-agent-frontend/dist
+yu-ai-agent-frontend/.env
+yu-ai-agent-frontend/.env.local
+yu-ai-agent-frontend/.DS_Store
+yu-ai-agent-frontend/.idea

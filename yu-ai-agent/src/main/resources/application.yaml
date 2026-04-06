@@ -1,0 +1,69 @@
+spring:
+  application:
+    name: yu-ai-agent
+  profiles:
+    active: local
+  datasource:
+    url: jdbc:postgresql://rm-cn-qzm4nds500001izo.rwlb.rds.aliyuncs.com/yu_ai_agent
+    username: 改为你的用户名
+    password: 改为你的密码
+  ai:
+    vectorstore:
+      pgvector:
+        index-type: HNSW
+        dimensions: 1536
+        distance-type: COSINE_DISTANCE
+        max-document-batch-size: 10000
+
+#    mcp:
+#      client:
+##        stdio:
+##          servers-configuration: classpath:mcp-servers.json
+#          sse:
+#            connections:
+#              server1:
+#                url: http://localhost:8127
+
+
+  # QQ邮箱配置
+  mail:
+    host: smtp.qq.com # QQ邮箱服务器地址
+    port: 465 # QQ邮箱服务器端口
+    username: 2272909516@qq.com
+    password: 授权码
+    protocol: smtps # SSL协议
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+          auth: true
+        debug: false
+
+server:
+  port: 8426
+  servlet:
+    context-path: /api
+
+# springdoc-openapi ??????
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.example.yuaiagent.controller
+# knife4j???????????????
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
+
+search-api:
+  api-key: 位于Local配置文件下的密钥
+
